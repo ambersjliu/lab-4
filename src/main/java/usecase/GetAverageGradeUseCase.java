@@ -34,6 +34,10 @@ public final class GetAverageGradeUseCase {
             sum = sum + gradeDataBase.getGrade(member, course).getGrade();
             count++;
         }
+
+        if (count == 0) {
+            return 0;
+        }
         return sum / count;
     }
 }
